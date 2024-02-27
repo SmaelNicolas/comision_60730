@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
+import { Navbar } from "./components/Navbar/Navbar";
+// import {
+// 	ButtonEjemploConEstado,
+// 	ButtonEjemploSinEstado,
+// } from "./components/EjemploBoton/EjemplosButton";
+// import { Button } from "./components/MicroDesafio2/Button";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	// const myStyles = {
+	// 	background: "red",
+	// 	color: "yellow",
+	// 	padding: "20px 60px",
+	// 	textAlign: "center",
+	// 	cursor: "grab",
+	// };
+
+	return (
+		<div className="App">
+			<Navbar />
+			<ItemListContainer bienvenida="Hola Coder" />
+			{/* <ButtonEjemploSinEstado></ButtonEjemploSinEstado>
+			<ButtonEjemploConEstado text="Hola" text2="HOLA 2" /> */}
+			{/* <Button
+				background="red"
+				label="BUtton Alert"
+				styles={myStyles}
+				func={() => alert("HOLA")}>
+				HOLA
+			</Button> */}
+		</div>
+	);
 }
 
 export default App;
