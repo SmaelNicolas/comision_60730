@@ -19,7 +19,7 @@ export const ItemListContainer = (props) => {
 	console.log(myProducts);
 
 	return (
-		<div className="mainContainer">
+		<div className="container--cards">
 			<ItemList products={myProducts} />
 		</div>
 	);
