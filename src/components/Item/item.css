@@ -6,8 +6,8 @@
 
 .card {
 	background: #191c29;
-	width: 300px;
-	height: 550px;
+	width: 250px;
+	height: 350px;
 	margin: 10px;
 	padding: 10px 3px;
 	position: relative;
@@ -83,5 +83,7 @@
 
 .card--more {
 	text-decoration: none;
-	color: rgb(18, 240, 166);
+	color: yellow;
+	background: black;
+	padding: 5px 10px;
 }
