@@ -4,6 +4,7 @@
 // import { CicloDeVida } from "./components/EjemplosClases/CicloDeVida";
 // import { HookUseRef } from "./components/EjemplosClases/HookUseRef";
 // import { Button } from "./components/EjemplosClases/MicroDesafio2/Button";
+import { EventoBoton } from "./components/EjemplosClases/EventoBoton/EventoBoton";
 import { Button } from "./components/EjemplosClases/HoC/Button";
 import { addOnClick } from "./components/EjemplosClases/HoC/addOnClick";
 import { ItemCount } from "./components/EjemplosClases/ItemCount/ItemCount";
@@ -64,8 +65,9 @@ function AppDeEjemplosClase() {
 			<Posts /> */}
 			{/* <Button />
 			<ButtonHoC /> */}
-			<Producto nombre="Producto 1" precio={1000} />
-			<ProductoModificado nombre="Producto 2" precio={1000} />
+			{/* <Producto nombre="Producto 1" precio={1000} /> */}
+			{/* <ProductoModificado nombre="Producto 2" precio={1000} /> */}
+			<EventoBoton />
 		</div>
 	);
 }
