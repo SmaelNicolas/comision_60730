@@ -8,7 +8,7 @@ export const ItemListContainer = (props) => {
 	const myPromise = new Promise((resolve) => {
 		setTimeout(() => {
 			resolve(products);
-		}, 3000);
+		}, 1500);
 	});
 	useEffect(() => {
 		myPromise.then((data) => {
