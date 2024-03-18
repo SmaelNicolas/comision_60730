@@ -20,6 +20,8 @@
 .containerNav--ul--li {
 	list-style: none;
 	cursor: pointer;
+	text-decoration: none;
+	color: white;
 }
 
 .containerNav--ul--li:hover {
