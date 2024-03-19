@@ -4,6 +4,7 @@
 // import { CicloDeVida } from "./components/EjemplosClases/CicloDeVida";
 // import { HookUseRef } from "./components/EjemplosClases/HookUseRef";
 // import { Button } from "./components/EjemplosClases/MicroDesafio2/Button";
+import { useState } from "react";
 import { EventoBoton } from "./components/EjemplosClases/EventoBoton/EventoBoton";
 import { Button } from "./components/EjemplosClases/HoC/Button";
 import { addOnClick } from "./components/EjemplosClases/HoC/addOnClick";
@@ -16,6 +17,7 @@ import { Posts } from "./components/EjemplosClases/fetch/Posts";
 import { Users } from "./components/EjemplosClases/fetch/Users";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 // import { Promises } from "./components/EjemplosClases/Promise";
+import { InputVocals } from "./components/EjemplosClases/EventoBoton/InputVocals";
 import { Navbar } from "./components/Navbar/Navbar";
 // import {
 // 	ButtonEjemploConEstado,
@@ -30,11 +32,16 @@ function AppDeEjemplosClase() {
 	// 	textAlign: "center",
 	// 	cursor: "grab",
 	// };
-	// const [toggle, setToggle] = useState(false);
+	const [toggle, setToggle] = useState(false);
 
 	// const ButtonHoC = addOnClick(Button, "HOLA");
 
 	const ProductoModificado = modificarProducto(Producto);
+
+	const handleClick = (value) => {
+		setToggle(value);
+		console.log(`Console log desde APP ${value}`);
+	};
 
 	return (
 		<div className="App">
@@ -67,7 +74,8 @@ function AppDeEjemplosClase() {
 			<ButtonHoC /> */}
 			{/* <Producto nombre="Producto 1" precio={1000} /> */}
 			{/* <ProductoModificado nombre="Producto 2" precio={1000} /> */}
-			<EventoBoton />
+			{/* <EventoBoton handleClick={handleClick} /> */}
+			<InputVocals />
 		</div>
 	);
 }
