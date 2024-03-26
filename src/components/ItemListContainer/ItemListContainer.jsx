@@ -6,7 +6,7 @@ import "./itemListContainer.css";
 
 export const ItemListContainer = (props) => {
 	const { idCategory } = useParams();
-	console.log(idCategory);
+	// console.log(idCategory);
 
 	const [myProducts, setMyProducts] = useState([]);
 	const myPromise = new Promise((resolve) => {

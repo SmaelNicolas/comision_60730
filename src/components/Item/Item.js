@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./item.css";
 
 export const Item = ({ producto }) => {
@@ -12,7 +13,9 @@ export const Item = ({ producto }) => {
 			/>
 			<div className="card--price">$ {producto.price}</div>
 			{/* <ItemCount stock={producto.stock} /> */}
-			<button className="card--more">Ver Mas</button>
+			<Link to={`/item/${producto.id}`}>
+				<button className="card--more">Ver Mas</button>
+			</Link>
 		</div>
 	);
 };

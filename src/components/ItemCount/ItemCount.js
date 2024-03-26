@@ -1,8 +1,9 @@
 import React from "react";
 import { useCount } from "../hooks/useCount";
 
-export const ItemCount = () => {
+export const ItemCount = ({prod}) => {
 	const { count, decrement, increment, addToCart } = useCount();
+
 
 	return (
 		<div>
@@ -11,7 +12,7 @@ export const ItemCount = () => {
 				<span>{count}</span>
 				<button onClick={increment}>Sumar</button>
 			</div>
-			<button onClick={addToCart}>Agregar al 🛒</button>
+			<button onClick={()=>addToCart(prod)}>Agregar al 🛒</button>
 		</div>
 	);
 };

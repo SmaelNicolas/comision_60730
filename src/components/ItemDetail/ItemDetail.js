@@ -5,8 +5,9 @@ export const ItemDetail = ({ prod }) => {
 	return (
 		<div>
 			{/* PONER INFO DEL PROD */}
-			PONER INFO DEL PROD
-			<ItemCount />
+			<h3>{prod.title}</h3>
+			<img src={prod.img} alt="name" />
+			<ItemCount prod={prod} />
 		</div>
 	);
 };
