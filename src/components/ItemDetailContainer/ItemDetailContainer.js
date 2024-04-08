@@ -12,7 +12,7 @@ export const ItemDetailContainer = () => {
 	const myPromise = new Promise((resolve) => {
 		setTimeout(() => {
 			resolve(products);
-		}, 4500);
+		}, 1500);
 	});
 	useEffect(() => {
 		// CUANDO COMPAREN EL ID DE LA URL Y EL DE SUSPRODUCTOS CONTROLAR QUE AMBOS SEAN DEL MISMO TIPO (STRING O NUMBER)
@@ -23,8 +23,6 @@ export const ItemDetailContainer = () => {
 			})
 			.finally(() => setLoading(false));
 	}, [idItem]);
-
-	console.log(loading);
 
 	if (loading) return <Loader />;
 

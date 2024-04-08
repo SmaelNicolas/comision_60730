@@ -5,7 +5,7 @@
 	color: white;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 }
 .containerNav--ul {
@@ -29,5 +29,11 @@
 }
 
 .containerNav--ul--li.active {
+	color: yellow;
+}
+
+.CartQuantity{
+	font-size: 2rem;
+	text-decoration: none;
 	color: yellow;
 }

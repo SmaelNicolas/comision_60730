@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../contex/CartContext";
 
 export const CartWidget = () => {
-	const {cart} = useContext(CartContext)
+	const { cartQuantity } = useContext(CartContext);
 	return (
-		<Link to={"/cart"}>
-			<div>{cart.length}🛒</div>
+		<Link className="CartQuantity" to={"/cart"}>
+			<div>{cartQuantity}🛒</div>
 		</Link>
 	);
 };
