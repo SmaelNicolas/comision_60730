@@ -17,11 +17,14 @@ export const CartItem = ({ id, img, title, quantity, price }) => {
 			</div>
 			<div className="ItemOnCartContainerProductInfo">
 				<p className="ItemOnCartContainerProductTitle">{title}</p>
+				<p className="ItemOnCartContainerProductPrecio">
+					Price : US$ {price}
+				</p>
 				<p className="ItemOnCartContainerProductCantidad">
 					Quantity : {quantity}
 				</p>
 				<p className="ItemOnCartContainerProductPrecio">
-					Price : US$ {price}
+					Total Product : US$ {(price * quantity).toFixed(2)}
 				</p>
 			</div>
 			<div className="ItemOnCartContainerProductDelete">

@@ -18,7 +18,7 @@ export const CartItemList = () => {
 						img={product.img}
 						title={product.title}
 						quantity={product.quantity}
-						price={(product.price * product.quantity).toFixed(2)}
+						price={product.price}
 					/>
 				</div>
 			))}
