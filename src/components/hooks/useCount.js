@@ -15,6 +15,7 @@ export const useCount = () => {
 	};
 
 	const addToCart = (prod) => {
+		console.log(prod)
 		setCount(1);
 		// console.log(prod)
 		addProduct(prod , count);

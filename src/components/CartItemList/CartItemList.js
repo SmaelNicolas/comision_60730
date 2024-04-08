@@ -1,11 +1,12 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { CartContext } from "../../contex/CartContext";
 import { CartItem } from "../CartItem/CartItem";
 import "./cartItemList.css";
 
 export const CartItemList = () => {
-	const {cart} = useContext(CartContext);
-    
+	const { cart, totalCartValue, emptyCart } = useContext(CartContext);
+
 	return (
 		<div className="ItemOnCartContainerList">
 			{cart.map((product) => (
@@ -21,7 +22,16 @@ export const CartItemList = () => {
 					/>
 				</div>
 			))}
+			<div className="TotalCartPrice">Total Cart : ${totalCartValue}</div>
+			<button className="EmptyCartButton" onClick={emptyCart}>
+				Vaciar Carrito
+			</button>
+			<Link
+				to="/checkout"
+				className="FinishCartButton"
+				onClick={emptyCart}>
+				Terminar Compra
+			</Link>
 		</div>
 	);
-}
-
+};
