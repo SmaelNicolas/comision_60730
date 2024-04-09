@@ -28,8 +28,7 @@ export const CartItemList = () => {
 			</button>
 			<Link
 				to="/checkout"
-				className="FinishCartButton"
-				onClick={emptyCart}>
+				className="FinishCartButton">
 				Terminar Compra
 			</Link>
 		</div>

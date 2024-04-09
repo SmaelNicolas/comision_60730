@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { products } from "../../data/data";
+import { getProducts, getProductsByCategory } from "../../services/firebase";
 import { ItemList } from "../ItemList/ItemList";
 import { Loader } from "../Loader/Loader";
 import "./itemListContainer.css";
@@ -19,15 +20,16 @@ export const ItemListContainer = (props) => {
 	});
 	useEffect(() => {
 		setLoading(true);
-		myPromise
-			.then((data) => {
-				setMyProducts(
-					idCategory
-						? data.filter((prod) => prod.category === idCategory)
-						: data
-				);
-			})
-			.finally(() => setLoading(false));
+		
+		const customNameFunction = idCategory
+			? getProductsByCategory
+			: getProducts
+
+			customNameFunction(idCategory)
+				.then((data) => {
+					setMyProducts(data);
+				})
+				.finally(() => setLoading(false));
 	}, [idCategory]);
 
 	if (loading) return <Loader />;

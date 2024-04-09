@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { products } from "../../data/data";
+import { getOneProducts } from "../../services/firebase";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { Loader } from "../Loader/Loader";
 
@@ -17,9 +18,9 @@ export const ItemDetailContainer = () => {
 	useEffect(() => {
 		// CUANDO COMPAREN EL ID DE LA URL Y EL DE SUSPRODUCTOS CONTROLAR QUE AMBOS SEAN DEL MISMO TIPO (STRING O NUMBER)
 		// EL VALOR idItem QUE VIENE DE LA URL ES DE TIPO STRING PESE A SER UN NUMERO
-		myPromise
+		getOneProducts(idItem)
 			.then((data) => {
-				setMyProduct(data.find((prod) => prod.id === Number(idItem)));
+				setMyProduct(data);
 			})
 			.finally(() => setLoading(false));
 	}, [idItem]);
